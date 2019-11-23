@@ -43,4 +43,6 @@ docker run --rm -it -e DISPLAY=$DISPLAY \
     -v $goland:/home/andrei/.GoLand2019.2 \
     -v $java:/home/andrei/.java \
     -v $projects:/home/andrei/go/src/ \
+    --env _JAVA_AWT_WM_NONREPARENTING=1 \
+    --env AWT_TOOLKIT=MToolkit \
     goland-docker:latest
